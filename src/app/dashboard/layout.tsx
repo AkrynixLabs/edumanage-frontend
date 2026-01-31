@@ -1,17 +1,22 @@
-"use client";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import DashboardSidebar from "@/components/dashboard/DashboardSidebar";
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
 
-import { useAuth } from "@/context/AuthContext";
-
-export default function DashboardPage() {
-  const { user, logout } = useAuth();
-
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Logged in as {user?.email}</p>
-      <p>Role: {user?.role}</p>
+    <ProtectedRoute>
+      <div className="min-h-screen flex bg-gray-100">
+        <DashboardSidebar />
 
-      <button onClick={logout}>Logout</button>
-    </div>
+        <div className="flex-1 flex flex-col">
+          <DashboardHeader />
+          <main className="p-6">{children}</main>
+        </div>
+      </div>
+    </ProtectedRoute>
   );
 }
