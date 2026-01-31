@@ -1,4 +1,3 @@
-// src/lib/token.ts
 const TOKEN_KEY = "edumanage_token";
 
 export const tokenStorage = {
