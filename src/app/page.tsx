@@ -673,7 +673,7 @@ export default function LandingPage() {
 
       {/* CTA */}
       <Section id="cta" className="bg-slate-950">
-        <div className="relative max-w-7xl mx-auto px-6 py-20">
+<div className="relative max-w-7xl mx-auto px-6 pt-20 pb-8">
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -top-24 left-10 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
             <div className="absolute -bottom-24 right-10 h-64 w-64 rounded-full bg-teal-500/20 blur-3xl" />
@@ -687,7 +687,7 @@ export default function LandingPage() {
               Ready to modernize your school?
             </h2>
             <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-              Get a guided demo of Module 4 (Exams & Assessments) and see how EduManage
+              Get a guided demo of your Exams & Assessments and see how EduManage
               reduces errors and speeds up end-of-term workflows.
             </p>
 
@@ -706,46 +706,20 @@ export default function LandingPage() {
                 Talk to Us <MessageSquare className="h-4 w-4" />
               </Link>
             </div>
-
-            <div className="mt-8 flex flex-wrap gap-3 justify-center">
-              <Pill icon={Lock} text="Role-based access" />
-              <Pill icon={ClipboardCheck} text="Validated score entry" />
-              <Pill icon={BarChart3} text="Basic analytics" />
-            </div>
           </motion.div>
         </div>
       </Section>
 
     
       {/* FOOTER */}
-      <footer className="bg-gray-950 text-gray-400">
-        <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <div className="text-white font-extrabold tracking-tight">EduManage</div>
-              <div className="text-sm text-gray-400">
-                School Management Platform
-              </div>
-            </div>
+    <footer className="bg-gray-950 text-gray-400">
+  <div className="max-w-7xl mx-auto px-6 py-6">
+    <div className="border-t border-white/10 pt-4 text-sm text-center">
+      © {new Date().getFullYear()} EduManage. All rights reserved.
+    </div>
+  </div>
+</footer>
 
-            <div className="flex flex-wrap gap-3">
-              <Link className="text-sm hover:text-white transition" href="#features">
-                Features
-              </Link>
-              <Link className="text-sm hover:text-white transition" href="#how">
-                How it works
-              </Link>
-              <Link className="text-sm hover:text-white transition" href="/contact">
-                Contact
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-8 border-t border-white/10 pt-6 text-sm">
-            © {new Date().getFullYear()} EduManage. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
