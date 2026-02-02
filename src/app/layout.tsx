@@ -16,7 +16,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "EduManage",
   description:
-    "An education management platform to streamline administrative tasks and enhance learning experiences.",
+    "An education management platform to \
+    streamline administrative tasks and enhance learning experiences.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  }
 };
 
 export default function RootLayout({

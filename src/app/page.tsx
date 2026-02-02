@@ -215,17 +215,19 @@ export default function LandingPage() {
             <motion.div variants={stagger} initial="hidden" animate="show">
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
                 <Pill icon={ShieldCheck} text="Secure & Reliable" />
-                <Pill icon={Sparkles} text="Modern, Simple UI" />
-                <Pill icon={Users} text="Built for African schools" />
+                <Pill icon={Sparkles} text="Modern UI" />
+                <Pill icon={Sparkles} text="Simple workflows" />
               </motion.div>
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-6 text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight text-white"
+                className="text-white leading-[1.05] tracking-tight leading-[1.05] tracking-tight"
               >
-                EduManage{" "}
-                <span className="text-white/80 font-extrabold">
-                  — Smart School Management Made Simple
+                <p className="mt-6 text-4xl md:text-6xl font-extrabold">
+                  EduManage{" "}
+                </p>
+                <span className="text-white/70 mt-6 text-2xl md:text-4xl font-extrabold">
+                  Smart School Management Made Simple
                 </span>
               </motion.h1>
 
@@ -234,7 +236,7 @@ export default function LandingPage() {
                 className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed"
               >
                 Manage students, exams, results and school operations in one secure
-                digital platform — designed for clarity, speed, and fewer mistakes.
+                digital platform designed for clarity, speed, and fewer mistakes.
               </motion.p>
 
               <motion.div
@@ -620,14 +622,11 @@ export default function LandingPage() {
                 <h3 className="mt-4 text-2xl font-extrabold tracking-tight">
                   Trust, simplicity, and scale
                 </h3>
-                <p className="mt-3 text-gray-600">
-                  Built for African schools — modern, secure, and easy to use.
-                </p>
 
                 <div className="mt-6 space-y-3">
                   {[
                     "Easy to use (teachers don’t struggle)",
-                    "Designed for African school workflows",
+                    "Designed for school workflows",
                     "Scalable for growing institutions",
                     "Modern & secure technology approach",
                   ].map((t) => (

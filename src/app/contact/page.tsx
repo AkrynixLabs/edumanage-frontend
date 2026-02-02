@@ -66,41 +66,47 @@ export default function ContactPage() {
               We usually respond within 24 hours.
             </p>
 
-            <form className="mt-8 space-y-5">
+            <form 
+              className="mt-8 space-y-5"
+              action="https://formspree.io/f/xgoovwzo"
+              method="POST"
+            >
               <div>
-                <label className="block text-sm font-semibold text-gray-700">
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-700">
                   Your Name
                 </label>
                 <input
                   className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none focus:ring-2 focus:ring-blue-200"
-                  placeholder="School admin / teacher"
+                  id="name" name="name" type="text" required
+                  placeholder="School Admin / Teacher"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700">
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
                   Email Address
                 </label>
                 <input
-                  type="email"
                   className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none focus:ring-2 focus:ring-blue-200"
-                  placeholder="name@school.com"
+                  placeholder="example@gmail.com"
+                  type="email" id="email" name="email" required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700">
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-700">
                   Message
                 </label>
                 <textarea
                   rows={5}
                   className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none focus:ring-2 focus:ring-blue-200"
                   placeholder="Tell us your school name, level, and what you want to improve…"
+                  id="message" name="message" required 
                 />
               </div>
 
               <button
-                type="button"
+                type="submit"
                 className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700 hover:-translate-y-0.5 transition-all"
               >
                 Send Message <ArrowRight className="h-4 w-4" />
